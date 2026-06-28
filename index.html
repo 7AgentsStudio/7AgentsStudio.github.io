@@ -36,11 +36,13 @@ body{background:#000;color:var(--text-primary);font-family:var(--font-sans)}
 .sa-gauge{animation:sa-gauge 1.5s cubic-bezier(.22,.61,.36,1) both}
 @keyframes sa-gauge{from{stroke-dashoffset:628}}
 a{color:inherit;text-decoration:none}
-[data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .85s cubic-bezier(.22,.61,.36,1),transform .85s cubic-bezier(.22,.61,.36,1);will-change:opacity,transform}
-[data-reveal].is-in{opacity:1;transform:none}
-[data-reveal-delay="1"]{transition-delay:.08s}
-[data-reveal-delay="2"]{transition-delay:.16s}
-[data-reveal-delay="3"]{transition-delay:.24s}
+[data-reveal]{opacity:0;transform:translateY(38px) scale(.985);filter:blur(6px);transition:opacity 1s cubic-bezier(.22,.61,.36,1),transform 1s cubic-bezier(.22,.61,.36,1),filter 1s cubic-bezier(.22,.61,.36,1);will-change:opacity,transform,filter}
+[data-reveal].is-in{opacity:1;transform:none;filter:none}
+[data-reveal-delay="1"]{transition-delay:.09s}
+[data-reveal-delay="2"]{transition-delay:.18s}
+[data-reveal-delay="3"]{transition-delay:.27s}
+[data-reveal-delay="4"]{transition-delay:.36s}
+@media (prefers-reduced-motion: reduce){[data-reveal]{transition:none;opacity:1;transform:none;filter:none}}
 #sa-loader.sa-hidden{opacity:0;pointer-events:none}
 </style>
 <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
@@ -197,10 +199,10 @@ a{color:inherit;text-decoration:none}
     <div data-reveal="" style="margin-bottom:44px">
       <x-import component-from-global-scope="SignallqDesignSystem.Overline" hint-size="auto,16px">Roadmap</x-import>
     </div>
-    <div data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:16px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:16px">
 
       <!-- Android -->
-      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:24px;transition:border-color .35s ease" style-hover="border-color:var(--border)">
+      <div data-reveal="" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:24px;transition:border-color .35s ease" style-hover="border-color:var(--border)">
         <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:24px">
           <div style="display:flex;align-items:center;gap:10px"><x-import component-from-global-scope="SignallqDesignSystem.Icon" name="android" size="20" color="var(--text-primary)" hint-size="20px,20px"></x-import><span style="font:600 17px/1 var(--font-sans);letter-spacing:-.01em">Android</span></div>
           <x-import component-from-global-scope="SignallqDesignSystem.Badge" color="#F5A623" hint-size="auto,22px">Beta fechado</x-import>
@@ -214,7 +216,7 @@ a{color:inherit;text-decoration:none}
       </div>
 
       <!-- Web App -->
-      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:24px">
+      <div data-reveal="" data-reveal-delay="1" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:24px">
         <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:24px">
           <div style="display:flex;align-items:center;gap:10px"><x-import component-from-global-scope="SignallqDesignSystem.Icon" name="public" size="20" color="var(--text-primary)" hint-size="20px,20px"></x-import><span style="font:600 17px/1 var(--font-sans);letter-spacing:-.01em">Web App</span></div>
           <x-import component-from-global-scope="SignallqDesignSystem.Badge" color="#6C2BFF" hint-size="auto,22px">Em desenvolvimento</x-import>
@@ -228,7 +230,7 @@ a{color:inherit;text-decoration:none}
       </div>
 
       <!-- iOS -->
-      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:24px">
+      <div data-reveal="" data-reveal-delay="2" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:24px">
         <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:24px">
           <div style="display:flex;align-items:center;gap:10px"><x-import component-from-global-scope="SignallqDesignSystem.Icon" name="phone_iphone" size="20" color="var(--text-primary)" hint-size="20px,20px"></x-import><span style="font:600 17px/1 var(--font-sans);letter-spacing:-.01em">iOS</span></div>
           <x-import component-from-global-scope="SignallqDesignSystem.Badge" color="#9CA3AF" hint-size="auto,22px">Planejado</x-import>
