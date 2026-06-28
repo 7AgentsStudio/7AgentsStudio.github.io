@@ -395,8 +395,14 @@ class Component extends DCLogic {
     } else {
       nodes().forEach(reveal);
     }
-    // safety net: nothing stays invisible
-    this._safety = setTimeout(() => nodes().forEach(reveal), 2500);
+    // safety net: revela apenas o que esta na viewport (nao tudo) — evita
+    // que algo fique preso invisivel sem disparar o reveal das secoes de baixo
+    const revealVisible = () => nodes().forEach((el) => {
+      if (el.classList.contains('is-in')) return;
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) reveal(el);
+    });
+    this._safety = setTimeout(revealVisible, 2500);
 
     const bar = document.getElementById('sa-progress');
     const hero = document.getElementById('sa-hero-inner');
