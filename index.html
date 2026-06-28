@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_ds/signallq-design-system-e77ea465-291f-4bf5-930c-a267680da04e/_ds_bundle.css">
+<link rel="stylesheet" href="_ds/signallq-design-system-e77ea465-291f-4bf5-930c-a267680da04e/styles.css">
+<script src="_ds/signallq-design-system-e77ea465-291f-4bf5-930c-a267680da04e/_ds_bundle.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{background:#000;color:var(--text-primary);font-family:var(--font-sans)}
+::selection{background:var(--accent);color:#fff}
+#sa-nav{transition:background .4s ease,border-color .4s ease,backdrop-filter .4s ease}
+.sa-flow{stroke-dasharray:5 5;animation:sa-flow 1.5s linear infinite}
+@keyframes sa-flow{to{stroke-dashoffset:-20}}
+@media (prefers-reduced-motion: reduce){.sa-flow{animation:none}[data-reveal]{transition:none}.sa-gauge{animation:none}.sa-ring{animation:none;opacity:.32}.sa-node-glow{animation:none}}
+.sa-ring{animation:sa-ring 4.4s cubic-bezier(.22,.61,.36,1) infinite}
+@keyframes sa-ring{0%{transform:scale(.28);opacity:0}14%{opacity:.5}80%{opacity:0}100%{transform:scale(1);opacity:0}}
+.sa-node-glow{animation:sa-node 3.2s ease-in-out infinite}
+@keyframes sa-node{0%,100%{box-shadow:0 0 0 0 rgba(108,43,255,0)}50%{box-shadow:0 0 38px 2px rgba(108,43,255,.34)}}
+@media (max-width:880px){.sa-hero-grid{grid-template-columns:1fr !important}.sa-hero-visual{order:-1;max-width:300px !important;margin:0 0 8px 0 !important}}
+@media (max-width:560px){.sa-hero-visual{display:none !important}}
+@font-face{font-family:'Codec Pro';font-style:normal;font-weight:400 700;font-display:swap;src:url('https://db.onlinewebfonts.com/t/7d7a58e411aee636172a8f86dd7ce4d5.woff2') format('woff2')}
+.sa-gauge{animation:sa-gauge 1.5s cubic-bezier(.22,.61,.36,1) both}
+@keyframes sa-gauge{from{stroke-dashoffset:628}}
+a{color:inherit;text-decoration:none}
+[data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .85s cubic-bezier(.22,.61,.36,1),transform .85s cubic-bezier(.22,.61,.36,1);will-change:opacity,transform}
+[data-reveal].is-in{opacity:1;transform:none}
+[data-reveal-delay="1"]{transition-delay:.08s}
+[data-reveal-delay="2"]{transition-delay:.16s}
+[data-reveal-delay="3"]{transition-delay:.24s}
+#sa-loader.sa-hidden{opacity:0;pointer-events:none}
+</style>
+</helmet>
+
+<div class="dark" style="background:var(--bg-primary);color:var(--text-primary);font-family:var(--font-sans);overflow-x:hidden">
+
+  <!-- loader -->
+  <div id="sa-loader" style="position:fixed;inset:0;z-index:200;background:var(--bg-primary);display:flex;align-items:center;justify-content:center;transition:opacity .7s ease">
+    <div style="font:600 24px/1 'Codec Pro',var(--font-sans);letter-spacing:.4px;color:var(--text-primary)">7Agents</div>
+  </div>
+
+  <!-- scroll progress -->
+  <div style="position:fixed;top:0;left:0;width:100%;height:2px;z-index:120;pointer-events:none">
+    <div id="sa-progress" style="height:100%;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left center"></div>
+  </div>
+
+  <!-- nav -->
+  <header id="sa-nav" style="position:sticky;top:0;z-index:110;height:60px;background:transparent;border-bottom:1px solid transparent">
+    <nav style="max-width:1200px;margin:0 auto;height:60px;padding:0 clamp(20px,5vw,32px);display:flex;align-items:center;justify-content:space-between">
+      <a href="#inicio" style="font:600 18px/1 'Codec Pro',var(--font-sans);letter-spacing:.4px">7Agents</a>
+      <div style="display:flex;align-items:center;gap:clamp(18px,3vw,34px);font:500 14px/1 var(--font-sans)">
+        <a href="#signallq" style="color:var(--text-secondary);transition:color .25s ease" style-hover="color:var(--accent)">SignallQ</a>
+        <a href="#" style="color:var(--text-secondary);transition:color .25s ease" style-hover="color:var(--accent)">GitHub</a>
+        <a href="#contato" style="color:var(--text-secondary);transition:color .25s ease" style-hover="color:var(--accent)">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- hero -->
+  <section id="inicio" data-screen-label="Hero" style="max-width:1200px;margin:0 auto;padding:clamp(96px,15vw,180px) clamp(20px,5vw,32px) clamp(80px,11vw,140px)">
+    <div class="sa-hero-grid" style="display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(40px,6vw,72px);align-items:center">
+    <div id="sa-hero-inner">
+      <div data-reveal="">
+        <x-import component-from-global-scope="SignallqDesignSystem.Overline" hint-size="auto,16px">Estúdio de software · AI-first · Desde 2026</x-import>
+      </div>
+      <h1 data-reveal="" data-reveal-delay="1" style="margin-top:26px;font:700 clamp(46px,7.6vw,90px)/1.02 var(--font-sans);letter-spacing:-.04em;max-width:13ch">Construindo o SignallQ.</h1>
+      <p data-reveal="" data-reveal-delay="2" style="margin-top:30px;max-width:600px;font:400 clamp(17px,1.8vw,21px)/1.55 var(--font-sans);color:var(--text-secondary)">Plataforma de diagnóstico de conectividade construída com desenvolvimento AI-first: arquitetura offline-first, núcleo de medição compartilhado e entrega contínua para Android, Web (PWA) e, em seguida, iOS.</p>
+      <div data-reveal="" data-reveal-delay="3" style="margin-top:42px;display:flex;flex-wrap:wrap;gap:12px">
+        <a href="#signallq" style="display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:var(--radius-button);background:var(--accent);color:#fff;border:1px solid var(--accent);font:500 15px/1 var(--font-sans);transition:transform .3s ease,opacity .3s ease" style-hover="transform:translateY(-2px);opacity:.92">Conheça o SignallQ</a>
+        <a href="#" style="display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:var(--radius-button);background:var(--bg-card);color:var(--text-primary);border:1px solid var(--border);font:500 15px/1 var(--font-sans);transition:background .3s ease,border-color .3s ease,transform .3s ease" style-hover="background:var(--bg-secondary);border-color:var(--text-tertiary);transform:translateY(-2px)">GitHub</a>
+      </div>
+    </div>
+
+      <!-- abstract signal composition -->
+      <div class="sa-hero-visual" data-reveal="" data-reveal-delay="3" style="position:relative;width:100%;aspect-ratio:1/1;max-width:460px;margin-left:auto;display:flex;align-items:center;justify-content:center">
+        <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:38px 38px;border-radius:24px;-webkit-mask-image:radial-gradient(circle at 50% 50%, #000 38%, transparent 74%);mask-image:radial-gradient(circle at 50% 50%, #000 38%, transparent 74%)"></div>
+        <div style="position:absolute;width:74%;height:74%;border:1px solid rgba(108,43,255,.5);border-radius:50%;transform-origin:center" class="sa-ring"></div>
+        <div style="position:absolute;width:74%;height:74%;border:1px solid rgba(108,43,255,.5);border-radius:50%;transform-origin:center;animation-delay:1.1s" class="sa-ring"></div>
+        <div style="position:absolute;width:74%;height:74%;border:1px solid rgba(108,43,255,.5);border-radius:50%;transform-origin:center;animation-delay:2.2s" class="sa-ring"></div>
+        <div style="position:absolute;width:74%;height:74%;border:1px solid rgba(108,43,255,.5);border-radius:50%;transform-origin:center;animation-delay:3.3s" class="sa-ring"></div>
+        <div style="position:absolute;width:46%;height:46%;border:1px solid var(--border);border-radius:50%"></div>
+        <div class="sa-node-glow" style="position:relative;width:84px;height:84px;border-radius:22px;background:var(--accent);display:flex;align-items:center;justify-content:center">
+          <x-import component-from-global-scope="SignallqDesignSystem.Icon" name="sensors" size="40" color="#fff" hint-size="40px,40px"></x-import>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- featured product -->
+  <section id="signallq" data-screen-label="SignallQ" style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-secondary)">
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(72px,10vw,128px) clamp(20px,5vw,32px)">
+      <div style="display:flex;flex-wrap:wrap;gap:clamp(40px,6vw,80px);align-items:center">
+
+        <div data-reveal="" style="flex:1 1 360px;min-width:300px">
+          <x-import component-from-global-scope="SignallqDesignSystem.Overline" hint-size="auto,16px">Produto em destaque</x-import>
+          <div style="margin-top:22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+            <img src="assets/signallq-lockup-dark-bg.png" alt="SignallQ" style="height:clamp(38px,5vw,56px);width:auto;display:block">
+            <x-import component-from-global-scope="SignallqDesignSystem.Badge" color="#6C2BFF" hint-size="auto,22px">Em desenvolvimento</x-import>
+          </div>
+          <p style="margin-top:22px;max-width:520px;font:400 clamp(16px,1.6vw,18px)/1.6 var(--font-sans);color:var(--text-secondary)">Núcleo de medição nativo coleta sinal, throughput e estabilidade; um modelo na borda (Cloudflare AI) interpreta as métricas e gera o laudo. Cada métrica vem acompanhada do veredito: RSSI, Mbps e uptime traduzidos em diagnóstico.</p>
+
+          <div style="margin-top:32px"><x-import component-from-global-scope="SignallqDesignSystem.Overline" hint-size="auto,16px">Plataformas</x-import></div>
+          <div style="margin-top:14px;display:flex;flex-direction:column;gap:10px;max-width:300px">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-button)"><span style="font:500 14px/1 var(--font-sans)">Android</span><span style="font:500 12px/1 var(--font-sans);color:#F5A623">Beta fechado</span></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-button)"><span style="font:500 14px/1 var(--font-sans)">Web App</span><span style="font:500 12px/1 var(--font-sans);color:var(--accent)">Em desenvolvimento</span></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--bg-card);border:1px dashed var(--border);border-radius:var(--radius-button)"><span style="font:500 14px/1 var(--font-sans);color:var(--text-secondary)">iOS</span><span style="font:500 12px/1 var(--font-sans);color:var(--text-tertiary)">Planejado</span></div>
+          </div>
+
+          <div style="margin-top:28px;display:flex;flex-wrap:wrap;gap:8px">
+            <span style="padding:7px 13px;border:1px solid var(--border);border-radius:var(--radius-pill);background:var(--bg-card);font:500 12px/1 var(--font-sans)">Material 3</span>
+            <span style="padding:7px 13px;border:1px solid var(--border);border-radius:var(--radius-pill);background:var(--bg-card);font:500 12px/1 var(--font-sans)">Cloudflare</span>
+            <span style="padding:7px 13px;border:1px solid var(--border);border-radius:var(--radius-pill);background:var(--bg-card);font:500 12px/1 var(--font-sans)">AI</span>
+            <span style="padding:7px 13px;border:1px solid var(--border);border-radius:var(--radius-pill);background:var(--bg-card);font:500 12px/1 var(--font-sans)">Kotlin</span>
+            <span style="padding:7px 13px;border:1px solid var(--border);border-radius:var(--radius-pill);background:var(--bg-card);font:500 12px/1 var(--font-sans)">React</span>
+          </div>
+        </div>
+
+        <div data-reveal="" data-reveal-delay="1" style="flex:1 1 380px;min-width:300px">
+          <div style="position:relative;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:8px;background-image:linear-gradient(var(--bg-secondary) 1px,transparent 1px),linear-gradient(90deg,var(--bg-secondary) 1px,transparent 1px);background-size:28px 28px;overflow:hidden">
+            <div style="padding:24px 12px 8px;display:flex;flex-direction:column;align-items:center">
+              <div style="position:relative;width:240px;height:240px">
+                <svg width="240" height="240" style="transform:rotate(-90deg);display:block">
+                  <circle cx="120" cy="120" r="100" fill="none" stroke="#1A1A1A" stroke-width="14"></circle>
+                  <circle class="sa-gauge" cx="120" cy="120" r="100" fill="none" stroke="#34D399" stroke-width="14" stroke-linecap="round" stroke-dasharray="628.3" stroke-dashoffset="94" style="filter:drop-shadow(0 0 7px rgba(52,211,153,.40))"></circle>
+                </svg>
+                <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+                  <div style="font:700 48px/1 var(--font-sans);color:var(--text-primary)">486</div>
+                  <div style="margin-top:4px;font:400 14px/1 var(--font-sans);color:var(--text-secondary)">Mbps</div>
+                  <div style="margin-top:10px;font:600 12px/1 var(--font-sans);letter-spacing:.5px;color:#34D399">DOWNLOAD</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:8px;margin-top:26px;flex-wrap:wrap;justify-content:center">
+                <span style="display:inline-flex;align-items:center;gap:5px;padding:7px 12px;border-radius:999px;font:600 11px/1 var(--font-sans);background:rgba(34,197,94,.12);color:#22C55E">✓ Latência · 12 ms</span>
+                <span style="display:inline-flex;align-items:center;gap:5px;padding:7px 12px;border-radius:999px;font:600 11px/1 var(--font-sans);background:rgba(108,43,255,.16);color:#9B6BFF">Download · 486 Mbps</span>
+                <span style="display:inline-flex;align-items:center;gap:5px;padding:7px 12px;border-radius:999px;font:600 11px/1 var(--font-sans);background:var(--bg-secondary);color:var(--text-tertiary)">Upload · 212 Mbps</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-top:16px;color:var(--text-tertiary)">
+                <x-import component-from-global-scope="SignallqDesignSystem.Icon" name="dns" size="16" color="var(--text-tertiary)" hint-size="16px,16px"></x-import>
+                <span style="font:400 12px/1 var(--font-sans)">Servidor: São Paulo · Claro</span>
+              </div>
+            </div>
+            <div style="display:flex;gap:8px;padding:8px 8px 4px">
+              <div style="flex:1;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-button);padding:12px"><div style="font:700 18px/1 var(--font-sans)">486</div><div style="margin-top:6px;font:400 11px/1 var(--font-sans);color:var(--text-secondary)">Mbps · <span style="color:var(--success)">Excelente</span></div></div>
+              <div style="flex:1;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-button);padding:12px"><div style="font:700 18px/1 var(--font-sans)">−27</div><div style="margin-top:6px;font:400 11px/1 var(--font-sans);color:var(--text-secondary)">dBm · <span style="color:var(--success)">Forte</span></div></div>
+              <div style="flex:1;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-button);padding:12px"><div style="font:700 18px/1 var(--font-sans)">99,9%</div><div style="margin-top:6px;font:400 11px/1 var(--font-sans);color:var(--text-secondary)">Uptime · <span style="color:var(--success)">Estável</span></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- about -->
+  <section data-screen-label="Sobre" style="border-top:1px solid var(--border);background:var(--bg-primary)">
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(72px,10vw,120px) clamp(20px,5vw,32px);display:flex;flex-wrap:wrap;gap:clamp(32px,6vw,90px)">
+      <div data-reveal="" style="flex:1 1 320px;min-width:280px">
+        <x-import component-from-global-scope="SignallqDesignSystem.Overline" hint-size="auto,16px">Sobre a 7Agents</x-import>
+        <h2 style="margin-top:22px;font:700 clamp(28px,3.6vw,42px)/1.12 var(--font-sans);letter-spacing:-.03em;max-width:13ch">Construímos os nossos próprios produtos.</h2>
+      </div>
+      <div data-reveal="" data-reveal-delay="1" style="flex:1 1 380px;min-width:280px;max-width:560px">
+        <p style="font:400 clamp(16px,1.6vw,18px)/1.7 var(--font-sans);color:var(--text-secondary)">A 7Agents é um estúdio de software AI-first. Definimos a arquitetura e os contratos e deixamos a IA acelerar a implementação — desenvolvimento assistido do protótipo ao deploy, sempre com revisão humana e tipagem forte.</p>
+        <p style="margin-top:18px;font:400 clamp(16px,1.6vw,18px)/1.7 var(--font-sans);color:var(--text-secondary)">Cada produto nasce de uma decisão de arquitetura, não de uma tela. Stack enxuta, código tipado e fronteiras claras entre domínio, dados e interface — menos camadas, mais previsibilidade.</p>
+        <div style="margin-top:34px;display:flex;flex-wrap:wrap;gap:12px 30px">
+          <span style="font:500 14px/1 var(--font-sans);color:var(--text-primary)">AI-first</span>
+          <span style="font:500 14px/1 var(--font-sans);color:var(--text-primary)">Arquitetura primeiro</span>
+          <span style="font:500 14px/1 var(--font-sans);color:var(--text-primary)">Offline-first</span>
+          <span style="font:500 14px/1 var(--font-sans);color:var(--text-primary)">Longo prazo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- roadmap -->
+  <section data-screen-label="Roadmap" style="max-width:1200px;margin:0 auto;padding:clamp(72px,10vw,120px) clamp(20px,5vw,32px)">
+    <div data-reveal="" style="margin-bottom:44px">
+      <x-import component-from-global-scope="SignallqDesignSystem.Overline" hint-size="auto,16px">Roadmap</x-import>
+    </div>
+    <div data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:16px">
+
+      <!-- Android -->
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:24px;transition:border-color .35s ease" style-hover="border-color:var(--border)">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:24px">
+          <div style="display:flex;align-items:center;gap:10px"><x-import component-from-global-scope="SignallqDesignSystem.Icon" name="android" size="20" color="var(--text-primary)" hint-size="20px,20px"></x-import><span style="font:600 17px/1 var(--font-sans);letter-spacing:-.01em">Android</span></div>
+          <x-import component-from-global-scope="SignallqDesignSystem.Badge" color="#F5A623" hint-size="auto,22px">Beta fechado</x-import>
+        </div>
+        <div style="position:relative;padding-left:26px;border-left:1px solid var(--border);display:flex;flex-direction:column;gap:22px">
+          <div style="position:relative"><div style="position:absolute;left:-32px;top:1px;width:11px;height:11px;border-radius:50%;background:#22C55E"></div><div style="font:500 15px/1.2 var(--font-sans);color:var(--text-secondary)">Planejamento</div></div>
+          <div style="position:relative"><div style="position:absolute;left:-32px;top:1px;width:11px;height:11px;border-radius:50%;background:#22C55E"></div><div style="font:500 15px/1.2 var(--font-sans);color:var(--text-secondary)">Desenvolvimento</div></div>
+          <div style="position:relative"><div style="position:absolute;left:-32px;top:0;width:11px;height:11px;border-radius:50%;background:var(--bg-card);border:2px solid var(--accent);box-shadow:0 0 0 4px rgba(108,43,255,.16)"></div><div style="font:600 15px/1.2 var(--font-sans);color:var(--text-primary)">Testes</div><div style="margin-top:5px;font:500 12px/1 var(--font-sans);color:var(--accent)">Em andamento</div></div>
+          <div style="position:relative"><div style="position:absolute;left:-32px;top:1px;width:11px;height:11px;border-radius:50%;background:var(--bg-card);border:1px solid var(--border)"></div><div style="font:500 15px/1.2 var(--font-sans);color:var(--text-tertiary)">Lançamento</div></div>
+        </div>
+      </div>
+
+      <!-- Web App -->
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:24px">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:24px">
+          <div style="display:flex;align-items:center;gap:10px"><x-import component-from-global-scope="SignallqDesignSystem.Icon" name="public" size="20" color="var(--text-primary)" hint-size="20px,20px"></x-import><span style="font:600 17px/1 var(--font-sans);letter-spacing:-.01em">Web App</span></div>
+          <x-import component-from-global-scope="SignallqDesignSystem.Badge" color="#6C2BFF" hint-size="auto,22px">Em desenvolvimento</x-import>
+        </div>
+        <div style="position:relative;padding-left:26px;border-left:1px solid var(--border);display:flex;flex-direction:column;gap:22px">
+          <div style="position:relative"><div style="position:absolute;left:-32px;top:1px;width:11px;height:11px;border-radius:50%;background:#22C55E"></div><div style="font:500 15px/1.2 var(--font-sans);color:var(--text-secondary)">Planejamento</div></div>
+          <div style="position:relative"><div style="position:absolute;left:-32px;top:0;width:11px;height:11px;border-radius:50%;background:var(--bg-card);border:2px solid var(--accent);box-shadow:0 0 0 4px rgba(108,43,255,.16)"></div><div style="font:600 15px/1.2 var(--font-sans);color:var(--text-primary)">Desenvolvimento</div><div style="margin-top:5px;font:500 12px/1 var(--font-sans);color:var(--accent)">Em andamento</div></div>
+          <div style="position:relative"><div style="position:absolute;left:-32px;top:1px;width:11px;height:11px;border-radius:50%;background:var(--bg-card);border:1px solid var(--border)"></div><div style="font:500 15px/1.2 var(--font-sans);color:var(--text-tertiary)">Testes</div></div>
+          <div style="position:relative"><div style="position:absolute;left:-32px;top:1px;width:11px;height:11px;border-radius:50%;background:var(--bg-card);border:1px solid var(--border)"></div><div style="font:500 15px/1.2 var(--font-sans);color:var(--text-tertiary)">Lançamento</div></div>
+        </div>
+      </div>
+
+      <!-- iOS -->
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:24px">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:24px">
+          <div style="display:flex;align-items:center;gap:10px"><x-import component-from-global-scope="SignallqDesignSystem.Icon" name="phone_iphone" size="20" color="var(--text-primary)" hint-size="20px,20px"></x-import><span style="font:600 17px/1 var(--font-sans);letter-spacing:-.01em">iOS</span></div>
+          <x-import component-from-global-scope="SignallqDesignSystem.Badge" color="#9CA3AF" hint-size="auto,22px">Planejado</x-import>
+        </div>
+        <div style="position:relative;padding-left:26px;border-left:1px solid var(--border);display:flex;flex-direction:column;gap:22px">
+          <div style="position:relative"><div style="position:absolute;left:-32px;top:0;width:11px;height:11px;border-radius:50%;background:var(--bg-card);border:2px solid var(--accent);box-shadow:0 0 0 4px rgba(108,43,255,.16)"></div><div style="font:600 15px/1.2 var(--font-sans);color:var(--text-primary)">Planejamento</div><div style="margin-top:5px;font:500 12px/1 var(--font-sans);color:var(--accent)">Em definição</div></div>
+          <div style="position:relative"><div style="position:absolute;left:-32px;top:1px;width:11px;height:11px;border-radius:50%;background:var(--bg-card);border:1px solid var(--border)"></div><div style="font:500 15px/1.2 var(--font-sans);color:var(--text-tertiary)">Desenvolvimento</div></div>
+          <div style="position:relative"><div style="position:absolute;left:-32px;top:1px;width:11px;height:11px;border-radius:50%;background:var(--bg-card);border:1px solid var(--border)"></div><div style="font:500 15px/1.2 var(--font-sans);color:var(--text-tertiary)">Testes</div></div>
+          <div style="position:relative"><div style="position:absolute;left:-32px;top:1px;width:11px;height:11px;border-radius:50%;background:var(--bg-card);border:1px solid var(--border)"></div><div style="font:500 15px/1.2 var(--font-sans);color:var(--text-tertiary)">Lançamento</div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- upcoming products -->
+  <section data-screen-label="Proximos" style="border-top:1px solid var(--border);background:var(--bg-primary)">
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(20px,5vw,32px)">
+      <div data-reveal="" style="margin-bottom:28px">
+        <x-import component-from-global-scope="SignallqDesignSystem.Overline" hint-size="auto,16px">Próximos produtos</x-import>
+      </div>
+      <div data-reveal="" style="max-width:520px">
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:26px;transition:border-color .35s ease" style-hover="border-color:var(--accent)">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+            <div style="font:600 22px/1 var(--font-sans);letter-spacing:-.02em">Quanto</div>
+            <x-import component-from-global-scope="SignallqDesignSystem.Badge" color="#9CA3AF" hint-size="auto,22px">Planejamento</x-import>
+          </div>
+          <p style="margin-top:14px;font:400 15px/1.6 var(--font-sans);color:var(--text-secondary)">Gestão patrimonial pessoal em um só lugar. O Quanto consolida contas, investimentos e ativos de diferentes instituições em uma visão única — com acompanhamento claro da evolução do patrimônio ao longo do tempo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- technology -->
+  <section data-screen-label="Tecnologia" style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(20px,5vw,32px)">
+    <div data-reveal="" style="margin-bottom:36px">
+      <x-import component-from-global-scope="SignallqDesignSystem.Overline" hint-size="auto,16px">Tecnologia</x-import>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:16px">
+
+      <div data-reveal="">
+        <div style="height:100%;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:24px;transition:border-color .35s ease,transform .35s ease" style-hover="border-color:var(--accent);transform:translateY(-3px)">
+          <x-import component-from-global-scope="SignallqDesignSystem.Icon" name="android" size="24" color="var(--text-primary)" hint-size="24px,24px"></x-import>
+          <div style="margin-top:18px;font:600 17px/1.3 var(--font-sans);letter-spacing:-.01em">Android</div>
+          <div style="margin-top:10px;font:400 14px/1.7 var(--font-sans);color:var(--text-secondary)">Kotlin<br>Jetpack Compose</div>
+        </div>
+      </div>
+
+      <div data-reveal="" data-reveal-delay="1">
+        <div style="height:100%;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:24px;transition:border-color .35s ease,transform .35s ease" style-hover="border-color:var(--accent);transform:translateY(-3px)">
+          <x-import component-from-global-scope="SignallqDesignSystem.Icon" name="language" size="24" color="var(--text-primary)" hint-size="24px,24px"></x-import>
+          <div style="margin-top:18px;font:600 17px/1.3 var(--font-sans);letter-spacing:-.01em">Web App</div>
+          <div style="margin-top:10px;font:400 14px/1.7 var(--font-sans);color:var(--text-secondary)">React<br>TypeScript<br>PWA</div>
+        </div>
+      </div>
+
+      <div data-reveal="" data-reveal-delay="2">
+        <div style="height:100%;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:24px;transition:border-color .35s ease,transform .35s ease" style-hover="border-color:var(--accent);transform:translateY(-3px)">
+          <x-import component-from-global-scope="SignallqDesignSystem.Icon" name="cloud" size="24" color="var(--text-primary)" hint-size="24px,24px"></x-import>
+          <div style="margin-top:18px;font:600 17px/1.3 var(--font-sans);letter-spacing:-.01em">Cloud</div>
+          <div style="margin-top:10px;font:400 14px/1.7 var(--font-sans);color:var(--text-secondary)">Cloudflare Workers<br>Cloudflare AI</div>
+        </div>
+      </div>
+
+      <div data-reveal="" data-reveal-delay="3">
+        <div style="height:100%;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:24px;transition:border-color .35s ease,transform .35s ease" style-hover="border-color:var(--accent);transform:translateY(-3px)">
+          <x-import component-from-global-scope="SignallqDesignSystem.Icon" name="dashboard" size="24" color="var(--text-primary)" hint-size="24px,24px"></x-import>
+          <div style="margin-top:18px;font:600 17px/1.3 var(--font-sans);letter-spacing:-.01em">Arquitetura</div>
+          <div style="margin-top:10px;font:400 14px/1.7 var(--font-sans);color:var(--text-secondary)">Material Design 3<br>Offline-first<br>Performance</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- philosophy -->
+  <section data-screen-label="Filosofia" style="background:radial-gradient(120% 130% at 50% 0%, rgba(108,43,255,0.10), transparent 58%), #050507;color:#fff;border-top:1px solid var(--border)">
+    <div data-reveal="" style="max-width:900px;margin:0 auto;padding:clamp(96px,14vw,168px) clamp(24px,6vw,40px);text-align:center">
+      <blockquote style="font:600 clamp(28px,4.2vw,46px)/1.32 var(--font-sans);letter-spacing:-.02em">“IA em primeiro lugar — do primeiro prompt ao produto em produção.”</blockquote>
+      <div style="margin-top:28px;font:500 14px/1 var(--font-sans);color:var(--text-tertiary)">— 7Agents</div>
+    </div>
+  </section>
+
+  <!-- links -->
+  <section id="contato" data-screen-label="Links" style="max-width:1200px;margin:0 auto;padding:clamp(72px,10vw,120px) clamp(20px,5vw,32px)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+      <a href="#signallq" data-reveal="">
+        <div style="height:100%;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:26px;display:flex;flex-direction:column;justify-content:space-between;min-height:150px;transition:border-color .35s ease,transform .35s ease" style-hover="border-color:var(--accent);transform:translateY(-3px)">
+          <div style="font:600 18px/1.2 var(--font-sans);letter-spacing:-.01em">SignallQ</div>
+          <div style="display:flex;align-items:center;justify-content:space-between"><span style="font:400 13px/1 var(--font-sans);color:var(--text-secondary)">Conheça o produto</span><x-import component-from-global-scope="SignallqDesignSystem.Icon" name="arrow_outward" size="20" color="var(--accent)" hint-size="20px,20px"></x-import></div>
+        </div>
+      </a>
+      <a href="#" data-reveal="" data-reveal-delay="1">
+        <div style="height:100%;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:26px;display:flex;flex-direction:column;justify-content:space-between;min-height:150px;transition:border-color .35s ease,transform .35s ease" style-hover="border-color:var(--accent);transform:translateY(-3px)">
+          <div style="font:600 18px/1.2 var(--font-sans);letter-spacing:-.01em">GitHub Organization</div>
+          <div style="display:flex;align-items:center;justify-content:space-between"><span style="font:400 13px/1 var(--font-sans);color:var(--text-secondary)">Código e projetos</span><x-import component-from-global-scope="SignallqDesignSystem.Icon" name="arrow_outward" size="20" color="var(--accent)" hint-size="20px,20px"></x-import></div>
+        </div>
+      </a>
+      <a href="mailto:contato@7agents.dev" data-reveal="" data-reveal-delay="2">
+        <div style="height:100%;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:26px;display:flex;flex-direction:column;justify-content:space-between;min-height:150px;transition:border-color .35s ease,transform .35s ease" style-hover="border-color:var(--accent);transform:translateY(-3px)">
+          <div style="font:600 18px/1.2 var(--font-sans);letter-spacing:-.01em">Contato</div>
+          <div style="display:flex;align-items:center;justify-content:space-between"><span style="font:400 13px/1 var(--font-sans);color:var(--text-secondary)">Fale com a 7Agents</span><x-import component-from-global-scope="SignallqDesignSystem.Icon" name="arrow_outward" size="20" color="var(--accent)" hint-size="20px,20px"></x-import></div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer style="border-top:1px solid var(--border);background:var(--bg-primary)">
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(48px,7vw,72px) clamp(20px,5vw,32px) clamp(40px,5vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:40px 24px">
+      <div style="grid-column:1 / -1;max-width:280px">
+        <div style="font:600 18px/1 'Codec Pro',var(--font-sans);letter-spacing:.4px">7Agents</div>
+        <div style="margin-top:10px;font:400 14px/1.5 var(--font-sans);color:var(--text-secondary)">Software Studio</div>
+      </div>
+      <div>
+        <div style="margin-bottom:16px"><x-import component-from-global-scope="SignallqDesignSystem.Overline" hint-size="auto,16px">Produtos</x-import></div>
+        <div style="display:flex;flex-direction:column;gap:10px;font:400 14px/1 var(--font-sans)">
+          <a href="#signallq" style="color:var(--text-primary);transition:color .25s ease" style-hover="color:var(--accent)">SignallQ</a>
+          <span style="color:var(--text-secondary)">Quanto (Planejado)</span>
+        </div>
+      </div>
+      <div>
+        <div style="margin-bottom:16px"><x-import component-from-global-scope="SignallqDesignSystem.Overline" hint-size="auto,16px">Plataformas</x-import></div>
+        <div style="display:flex;flex-direction:column;gap:10px;font:400 14px/1 var(--font-sans)">
+          <span style="color:var(--text-primary)">Android</span>
+          <span style="color:var(--text-primary)">Web App</span>
+          <span style="color:var(--text-secondary)">iOS (Planejado)</span>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-end;justify-content:flex-start">
+        <div style="font:400 13px/1 var(--font-sans);color:var(--text-secondary)">© 2026 7Agents</div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const loader = document.getElementById('sa-loader');
+    if (loader) setTimeout(() => { loader.classList.add('sa-hidden'); }, 480);
+
+    const reveal = (el) => el.classList.add('is-in');
+    const nodes = () => Array.from(document.querySelectorAll('[data-reveal]'));
+
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) { reveal(e.target); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -7% 0px' });
+      nodes().forEach((el) => io.observe(el));
+      // reveal anything already within the viewport on first paint (timer, not rAF — fires under throttling)
+      setTimeout(() => {
+        nodes().forEach((el) => {
+          const r = el.getBoundingClientRect();
+          if (r.top < window.innerHeight * 0.95) reveal(el);
+        });
+      }, 60);
+      this._io = io;
+    } else {
+      nodes().forEach(reveal);
+    }
+    // safety net: nothing stays invisible
+    this._safety = setTimeout(() => nodes().forEach(reveal), 2500);
+
+    const bar = document.getElementById('sa-progress');
+    const hero = document.getElementById('sa-hero-inner');
+    const nav = document.getElementById('sa-nav');
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const st = window.scrollY || document.documentElement.scrollTop || 0;
+        const h = (document.documentElement.scrollHeight - window.innerHeight) || 1;
+        if (bar) bar.style.transform = 'scaleX(' + Math.min(1, Math.max(0, st / h)) + ')';
+        if (hero) hero.style.transform = 'translateY(' + (st * 0.06) + 'px)';
+        if (nav) {
+          const elevated = st > 8;
+          nav.style.background = elevated ? 'rgba(0,0,0,.55)' : 'transparent';
+          nav.style.backdropFilter = elevated ? 'saturate(160%) blur(14px)' : 'none';
+          nav.style.webkitBackdropFilter = elevated ? 'saturate(160%) blur(14px)' : 'none';
+          nav.style.borderBottomColor = elevated ? 'var(--border)' : 'transparent';
+        }
+        ticking = false;
+      });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    this._onScroll = onScroll;
+    onScroll();
+  }
+  componentWillUnmount() {
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if (this._io) this._io.disconnect();
+    if (this._safety) clearTimeout(this._safety);
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

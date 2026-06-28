@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/signallq-design-system-e77ea465-291f-4bf5-930c-a267680da04e/_ds_bundle.css">
+  <link rel="stylesheet" href="_ds/signallq-design-system-e77ea465-291f-4bf5-930c-a267680da04e/styles.css">
+  <script src="_ds/signallq-design-system-e77ea465-291f-4bf5-930c-a267680da04e/_ds_bundle.js"></script>
+  <style>
+    html,body{margin:0;padding:0;background:#050507}
+    @font-face{font-family:'Codec Pro';font-style:normal;font-weight:400 700;font-display:swap;src:url('https://db.onlinewebfonts.com/t/7d7a58e411aee636172a8f86dd7ce4d5.woff2') format('woff2')}
+  </style>
+</helmet>
+
+<div style="box-sizing:border-box;width:1280px;background:#0A0A12;font-family:var(--font-sans);color:#F3F4F6;padding:80px;display:flex;flex-direction:column;gap:56px">
+
+  <div style="display:flex;align-items:center;justify-content:space-between">
+    <span style="font-size:18px;font-weight:600;letter-spacing:3px;color:#7C7C90;text-transform:uppercase">Identidade · 7Agents</span>
+    <span style="font-size:16px;font-weight:500;letter-spacing:2px;color:#4E4E60">Logo</span>
+  </div>
+
+  <!-- HERO WORDMARK — dark bg -->
+  <div style="position:relative;border:1px solid #1E1E2A;border-radius:28px;background:linear-gradient(180deg,#0E0E17,#0B0B12);padding:120px 0;display:flex;align-items:center;justify-content:center;overflow:hidden">
+    <div style="position:absolute;top:-160px;right:-120px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle, rgba(108,43,255,0.18), rgba(108,43,255,0) 64%);pointer-events:none"></div>
+    <div style="position:absolute;bottom:-200px;left:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle, rgba(37,99,235,0.14), rgba(37,99,235,0) 64%);pointer-events:none"></div>
+    <div style="position:relative;display:flex;align-items:center;gap:26px">
+      <div style="width:84px;height:84px;border-radius:20px;background:#6C2BFF;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 1px rgba(255,255,255,.06)">
+        <span style="font:700 36px/1 'Codec Pro',var(--font-sans);color:#fff;letter-spacing:-2.5px;text-indent:-2.5px;display:block;text-align:center">7A</span>
+      </div>
+      <span style="font:600 72px/1 'Codec Pro',var(--font-sans);letter-spacing:1px;color:#F3F4F6">7Agents</span>
+    </div>
+  </div>
+
+  <!-- CONSTRUCTION NOTE -->
+  <div style="border:1px solid #1E1E2A;border-radius:22px;background:#0E0E17;padding:36px 40px;display:flex;align-items:center;gap:28px">
+    <x-import component-from-global-scope="SignallqDesignSystem.Icon" name="text_fields" size="28" color="#6C2BFF" hint-size="28px,28px"></x-import>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <span style="font-size:15px;font-weight:600;letter-spacing:2px;color:#5A5A6E;text-transform:uppercase">Regra tipográfica</span>
+      <span style="font:400 16px/1.55 var(--font-sans);color:#C9CBD6;max-width:760px">A escrita do wordmark <strong style="color:#F3F4F6">7Agents</strong> é sempre composta na fonte <strong style="color:#F3F4F6">Codec Pro</strong>. Nunca substitua por outra família, nem altere o espaçamento entre letras.</span>
+    </div>
+  </div>
+
+  <!-- VARIATIONS -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+
+    <div style="border:1px solid #1E1E2A;border-radius:22px;background:#0E0E17;padding:40px;display:flex;flex-direction:column;gap:26px">
+      <span style="font-size:15px;font-weight:600;letter-spacing:2px;color:#5A5A6E;text-transform:uppercase">Wordmark · fundo claro</span>
+      <div style="display:flex;align-items:center;justify-content:center;background:#FFFFFF;border-radius:14px;padding:56px 40px">
+        <span style="font:600 44px/1 'Codec Pro',var(--font-sans);letter-spacing:.5px;color:#0A0A12">7Agents</span>
+      </div>
+    </div>
+
+    <div style="border:1px solid #1E1E2A;border-radius:22px;background:#0E0E17;padding:40px;display:flex;flex-direction:column;gap:26px">
+      <span style="font-size:15px;font-weight:600;letter-spacing:2px;color:#5A5A6E;text-transform:uppercase">Wordmark · fundo escuro</span>
+      <div style="display:flex;align-items:center;justify-content:center;background:#0A0A12;border:1px solid #1A1A26;border-radius:14px;padding:56px 40px">
+        <span style="font:600 44px/1 'Codec Pro',var(--font-sans);letter-spacing:.5px;color:#F3F4F6">7Agents</span>
+      </div>
+    </div>
+
+    <div style="border:1px solid #1E1E2A;border-radius:22px;background:#0E0E17;padding:40px;display:flex;flex-direction:column;gap:26px">
+      <span style="font-size:15px;font-weight:600;letter-spacing:2px;color:#5A5A6E;text-transform:uppercase">Símbolo · fundo claro</span>
+      <div style="display:flex;align-items:center;justify-content:center;background:#FFFFFF;border-radius:14px;padding:28px">
+        <div style="width:100%;aspect-ratio:1/1;border-radius:18%;background:#6C2BFF;display:flex;align-items:center;justify-content:center;overflow:hidden"><span style="font:700 230px/1 'Codec Pro',var(--font-sans);color:#fff;letter-spacing:-26px;text-indent:-26px;display:block;text-align:center">7A</span></div>
+      </div>
+    </div>
+
+    <div style="border:1px solid #1E1E2A;border-radius:22px;background:#0E0E17;padding:40px;display:flex;flex-direction:column;gap:26px">
+      <span style="font-size:15px;font-weight:600;letter-spacing:2px;color:#5A5A6E;text-transform:uppercase">Símbolo · fundo escuro</span>
+      <div style="display:flex;align-items:center;justify-content:center;background:#0A0A12;border:1px solid #1A1A26;border-radius:14px;padding:28px">
+        <div style="width:100%;aspect-ratio:1/1;border-radius:18%;background:#6C2BFF;display:flex;align-items:center;justify-content:center;overflow:hidden"><span style="font:700 230px/1 'Codec Pro',var(--font-sans);color:#fff;letter-spacing:-26px;text-indent:-26px;display:block;text-align:center">7A</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLEAR SPACE & MIN SIZE -->
+  <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:28px">
+    <div style="border:1px solid #1E1E2A;border-radius:22px;background:#0E0E17;padding:40px;display:flex;flex-direction:column;gap:26px">
+      <span style="font-size:15px;font-weight:600;letter-spacing:2px;color:#5A5A6E;text-transform:uppercase">Área de respiro</span>
+      <div style="display:flex;align-items:center;justify-content:center;background:#0A0A12;border:1px solid #1A1A26;border-radius:14px;padding:40px">
+        <div style="position:relative;padding:40px;border:1px dashed #2A2A3A;border-radius:10px">
+          <div style="width:80px;height:80px;border-radius:18px;background:#6C2BFF;display:flex;align-items:center;justify-content:center"><span style="font:700 34px/1 'Codec Pro',var(--font-sans);color:#fff;letter-spacing:-2.5px;text-indent:-2.5px;display:block;text-align:center">7A</span></div>
+        </div>
+      </div>
+      <span style="font:400 14px/1.5 var(--font-sans);color:#8A8A9E">Mantenha um respiro mínimo igual à altura do dígito “7” em todos os lados do símbolo e do wordmark.</span>
+    </div>
+
+    <div style="border:1px solid #1E1E2A;border-radius:22px;background:#0E0E17;padding:40px;display:flex;flex-direction:column;gap:26px">
+      <span style="font-size:15px;font-weight:600;letter-spacing:2px;color:#5A5A6E;text-transform:uppercase">Tamanho mínimo</span>
+      <div style="display:flex;align-items:flex-end;gap:36px;justify-content:center;background:#0A0A12;border:1px solid #1A1A26;border-radius:14px;padding:40px">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:12px">
+          <div style="width:32px;height:32px;border-radius:8px;background:#6C2BFF;display:flex;align-items:center;justify-content:center"><span style="font:700 13px/1 'Codec Pro',var(--font-sans);color:#fff;letter-spacing:-1px;text-indent:-1px;display:block;text-align:center">7A</span></div>
+          <span style="font-size:12px;color:#6E6E82">24px símbolo</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:12px">
+          <span style="font:600 22px/1 'Codec Pro',var(--font-sans);letter-spacing:.3px;color:#F3F4F6">7Agents</span>
+          <span style="font-size:12px;color:#6E6E82">96px wordmark</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLOR TOKENS -->
+  <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+    <span style="font-size:15px;font-weight:600;letter-spacing:2px;color:#5A5A6E;text-transform:uppercase;margin-right:8px">Cores</span>
+    <span style="display:flex;align-items:center;gap:12px;font-size:18px;font-weight:500;color:#C9CBD6;padding:12px 20px;border:1px solid #232333;border-radius:12px"><span style="width:20px;height:20px;border-radius:6px;background:#6C2BFF"></span>#6C2BFF</span>
+    <span style="display:flex;align-items:center;gap:12px;font-size:18px;font-weight:500;color:#C9CBD6;padding:12px 20px;border:1px solid #232333;border-radius:12px"><span style="width:20px;height:20px;border-radius:6px;background:#F3F4F6"></span>#F3F4F6</span>
+    <span style="display:flex;align-items:center;gap:12px;font-size:18px;font-weight:500;color:#C9CBD6;padding:12px 20px;border:1px solid #232333;border-radius:12px"><span style="width:20px;height:20px;border-radius:6px;background:#0A0A12;border:1px solid #232333"></span>#0A0A12</span>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
