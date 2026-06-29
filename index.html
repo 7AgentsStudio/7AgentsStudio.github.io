@@ -84,10 +84,10 @@ a{color:inherit;text-decoration:none}
     <div class="sa-hero-grid" style="display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(40px,6vw,72px);align-items:center">
     <div id="sa-hero-inner">
       <div data-reveal="">
-        <x-import component-from-global-scope="SignallqDesignSystem.Overline" hint-size="auto,16px">Estúdio de software · AI-first · Desde 2026</x-import>
+        <x-import component-from-global-scope="SignallqDesignSystem.Overline" hint-size="auto,16px">Estúdio de produto · construção AI-first</x-import>
       </div>
-      <h1 data-reveal="" data-reveal-delay="1" style="margin-top:26px;font:700 clamp(46px,7.6vw,90px)/1.02 var(--font-sans);letter-spacing:-.04em;max-width:13ch">Construindo o SignallQ.</h1>
-      <p data-reveal="" data-reveal-delay="2" style="margin-top:30px;max-width:600px;font:400 clamp(17px,1.8vw,21px)/1.55 var(--font-sans);color:var(--text-secondary)">Plataforma de diagnóstico de conectividade construída com desenvolvimento AI-first: arquitetura offline-first, núcleo de medição compartilhado e entrega contínua para Android, Web (PWA) e, em seguida, iOS.</p>
+      <h1 data-reveal="" data-reveal-delay="1" style="margin-top:26px;font:700 clamp(38px,6vw,72px)/1.04 var(--font-sans);letter-spacing:-.035em;max-width:18ch">A 7Agents transforma ideias em produtos reais — com IA como força de execução.</h1>
+      <p data-reveal="" data-reveal-delay="2" style="margin-top:30px;max-width:600px;font:400 clamp(17px,1.8vw,21px)/1.55 var(--font-sans);color:var(--text-secondary)">Definimos a arquitetura e os contratos, e usamos IA para acelerar a implementação do protótipo ao deploy — sempre com revisão humana e código tipado. O SignallQ é a prova: um app de diagnóstico de conectividade modular, do zero ao lançamento.</p>
       <div data-reveal="" data-reveal-delay="3" style="margin-top:42px;display:flex;flex-wrap:wrap;gap:12px">
         <a href="#signallq" style="display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:var(--radius-button);background:var(--accent);color:#fff;border:1px solid var(--accent);font:500 15px/1 var(--font-sans);transition:transform .3s ease,opacity .3s ease" style-hover="transform:translateY(-2px);opacity:.92">Conheça o SignallQ</a>
         <a href="https://github.com/7AgentsStudio" style="display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:var(--radius-button);background:var(--bg-card);color:var(--text-primary);border:1px solid var(--border);font:500 15px/1 var(--font-sans);transition:background .3s ease,border-color .3s ease,transform .3s ease" style-hover="background:var(--bg-secondary);border-color:var(--text-tertiary);transform:translateY(-2px)">GitHub</a>
@@ -120,13 +120,15 @@ a{color:inherit;text-decoration:none}
             <img src="assets/signallq-lockup-dark-bg.png" alt="SignallQ" style="height:clamp(38px,5vw,56px);width:auto;display:block">
             <x-import component-from-global-scope="SignallqDesignSystem.Badge" color="#6C2BFF" hint-size="auto,22px">Em desenvolvimento</x-import>
           </div>
-          <p style="margin-top:22px;max-width:520px;font:400 clamp(16px,1.6vw,18px)/1.6 var(--font-sans);color:var(--text-secondary)">Núcleo de medição nativo coleta sinal, throughput e estabilidade; um modelo na borda (Cloudflare AI) interpreta as métricas e gera o laudo. Cada métrica vem acompanhada do veredito: RSSI, Mbps e uptime traduzidos em diagnóstico.</p>
+          <p style="margin-top:22px;max-width:520px;font:400 clamp(16px,1.6vw,18px)/1.6 var(--font-sans);color:var(--text-secondary)">A maioria dos apps de rede mostra número. O SignallQ mostra veredito. Um núcleo de medição nativo coleta sinal, throughput e estabilidade; um modelo na borda (Cloudflare AI) interpreta as métricas e gera um laudo em linguagem natural — dizendo não só "como está", mas "o que fazer e de quem é o problema".</p>
+
+          <div style="margin-top:24px;max-width:520px;border-left:2px solid var(--accent);padding:6px 0 6px 18px"><p style="font:400 clamp(15px,1.5vw,16px)/1.6 var(--font-sans);color:var(--text-primary)">A diferença não é medir. É traduzir. RSSI, Mbps e uptime viram <span style="color:var(--text-secondary)">"seu Wi-Fi está longe do roteador"</span> ou <span style="color:var(--text-secondary)">"o problema está na rede, não no seu equipamento"</span>.</p></div>
 
           <div style="margin-top:32px"><x-import component-from-global-scope="SignallqDesignSystem.Overline" hint-size="auto,16px">Plataformas</x-import></div>
           <div style="margin-top:14px;display:flex;flex-direction:column;gap:10px;max-width:300px">
             <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-button)"><span style="font:500 14px/1 var(--font-sans)">Android</span><span style="font:500 12px/1 var(--font-sans);color:#F5A623">Beta fechado</span></div>
             <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-button)"><span style="font:500 14px/1 var(--font-sans)">Web App</span><span style="font:500 12px/1 var(--font-sans);color:var(--accent)">Em desenvolvimento</span></div>
-            <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--bg-card);border:1px dashed var(--border);border-radius:var(--radius-button)"><span style="font:500 14px/1 var(--font-sans);color:var(--text-secondary)">iOS</span><span style="font:500 12px/1 var(--font-sans);color:var(--text-tertiary)">Planejado</span></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--bg-card);border:1px dashed var(--border);border-radius:var(--radius-button)"><span style="font:500 14px/1 var(--font-sans);color:var(--text-secondary)">iOS</span><span style="font:500 12px/1 var(--font-sans);color:var(--text-tertiary)">Em avaliação</span></div>
           </div>
 
           <div style="margin-top:28px;display:flex;flex-wrap:wrap;gap:8px">
@@ -170,6 +172,70 @@ a{color:inherit;text-decoration:none}
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- modular architecture -->
+  <section data-screen-label="Arquitetura" style="border-top:1px solid var(--border);background:var(--bg-primary)">
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(72px,10vw,120px) clamp(20px,5vw,32px)">
+      <div data-reveal="" style="max-width:680px">
+        <x-import component-from-global-scope="SignallqDesignSystem.Overline" hint-size="auto,16px">Arquitetura</x-import>
+        <h2 style="margin-top:22px;font:700 clamp(28px,3.6vw,42px)/1.12 var(--font-sans);letter-spacing:-.03em">Construído em módulos — pronto para virar mais que um app.</h2>
+        <p style="margin-top:22px;font:400 clamp(16px,1.6vw,18px)/1.7 var(--font-sans);color:var(--text-secondary)">O SignallQ é dividido em 15 módulos independentes: um núcleo de medição compartilhado (rede, telefonia, persistência) e features isoladas. As features não dependem umas das outras — o produto pode ser recomposto, reembalado ou white-labeled sem reescrever o motor.</p>
+      </div>
+
+      <div style="margin-top:44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:16px">
+
+        <div data-reveal="" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:24px">
+          <x-import component-from-global-scope="SignallqDesignSystem.Overline" hint-size="auto,16px">Núcleo de medição</x-import>
+          <div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:8px">
+            <span style="padding:6px 12px;border:1px solid var(--border);border-radius:var(--radius-pill);background:var(--bg-secondary);font:500 12px/1 var(--font-sans)">Rede</span>
+            <span style="padding:6px 12px;border:1px solid var(--border);border-radius:var(--radius-pill);background:var(--bg-secondary);font:500 12px/1 var(--font-sans)">Telefonia</span>
+            <span style="padding:6px 12px;border:1px solid var(--border);border-radius:var(--radius-pill);background:var(--bg-secondary);font:500 12px/1 var(--font-sans)">Permissões</span>
+            <span style="padding:6px 12px;border:1px solid var(--border);border-radius:var(--radius-pill);background:var(--bg-secondary);font:500 12px/1 var(--font-sans)">Persistência</span>
+            <span style="padding:6px 12px;border:1px solid var(--border);border-radius:var(--radius-pill);background:var(--bg-secondary);font:500 12px/1 var(--font-sans)">Preferências</span>
+          </div>
+        </div>
+
+        <div data-reveal="" data-reveal-delay="1" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:24px">
+          <x-import component-from-global-scope="SignallqDesignSystem.Overline" hint-size="auto,16px">Diagnóstico</x-import>
+          <div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:8px">
+            <span style="padding:6px 12px;border:1px solid var(--border);border-radius:var(--radius-pill);background:var(--bg-secondary);font:500 12px/1 var(--font-sans)">Motor de laudo</span>
+            <span style="padding:6px 12px;border:1px solid var(--border);border-radius:var(--radius-pill);background:var(--bg-secondary);font:500 12px/1 var(--font-sans)">IA na borda</span>
+            <span style="padding:6px 12px;border:1px solid var(--border);border-radius:var(--radius-pill);background:var(--bg-secondary);font:500 12px/1 var(--font-sans)">Histórico</span>
+          </div>
+        </div>
+
+        <div data-reveal="" data-reveal-delay="2" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:24px">
+          <x-import component-from-global-scope="SignallqDesignSystem.Overline" hint-size="auto,16px">Experiência</x-import>
+          <div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:8px">
+            <span style="padding:6px 12px;border:1px solid var(--border);border-radius:var(--radius-pill);background:var(--bg-secondary);font:500 12px/1 var(--font-sans)">Velocidade</span>
+            <span style="padding:6px 12px;border:1px solid var(--border);border-radius:var(--radius-pill);background:var(--bg-secondary);font:500 12px/1 var(--font-sans)">Wi-Fi</span>
+            <span style="padding:6px 12px;border:1px solid var(--border);border-radius:var(--radius-pill);background:var(--bg-secondary);font:500 12px/1 var(--font-sans)">Fibra</span>
+            <span style="padding:6px 12px;border:1px solid var(--border);border-radius:var(--radius-pill);background:var(--bg-secondary);font:500 12px/1 var(--font-sans)">DNS</span>
+            <span style="padding:6px 12px;border:1px solid var(--border);border-radius:var(--radius-pill);background:var(--bg-secondary);font:500 12px/1 var(--font-sans)">Dispositivos</span>
+            <span style="padding:6px 12px;border:1px solid var(--border);border-radius:var(--radius-pill);background:var(--bg-secondary);font:500 12px/1 var(--font-sans)">Ajustes</span>
+          </div>
+        </div>
+
+      </div>
+
+      <p data-reveal="" style="margin-top:28px;font:400 clamp(15px,1.5vw,16px)/1.6 var(--font-sans);color:var(--text-tertiary)">Mesma base técnica, múltiplos produtos possíveis. É isso que torna o próximo passo viável.</p>
+    </div>
+  </section>
+
+  <!-- next frontier / ISP -->
+  <section data-screen-label="Proxima fronteira" style="border-top:1px solid var(--border);background:var(--bg-secondary)">
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(72px,10vw,120px) clamp(20px,5vw,32px)">
+      <div data-reveal="" style="max-width:720px">
+        <x-import component-from-global-scope="SignallqDesignSystem.Overline" hint-size="auto,16px">Próximo passo</x-import>
+        <h2 style="margin-top:22px;font:700 clamp(28px,3.6vw,42px)/1.12 var(--font-sans);letter-spacing:-.03em">A próxima fronteira: reduzir o custo de suporte dos provedores regionais.</h2>
+        <p style="margin-top:22px;font:400 clamp(16px,1.6vw,18px)/1.7 var(--font-sans);color:var(--text-secondary)">97% dos provedores de internet do Brasil têm menos de 10 mil clientes — e quase todos perdem dinheiro no call center com chamados que o próprio cliente poderia resolver. A direção do SignallQ é virar uma camada white-label para esses provedores: o cliente do ISP auto-diagnostica, resolve sozinho o que é do lado dele, e o que sobra chega ao suporte já pré-diagnosticado. Menos chamado N1, atendimento mais rápido, cliente menos frustrado.</p>
+        <div style="margin-top:28px;display:inline-flex;align-items:center;gap:10px;padding:14px 18px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card)">
+          <span style="font:400 14px/1.4 var(--font-sans);color:var(--text-secondary)">É provedor e quer acompanhar essa frente?</span>
+          <a href="#contato" style="font:600 14px/1 var(--font-sans);color:var(--accent)">Fale com a 7Agents →</a>
+        </div>
       </div>
     </div>
   </section>
@@ -233,7 +299,7 @@ a{color:inherit;text-decoration:none}
       <div data-reveal="" data-reveal-delay="2" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:24px">
         <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:24px">
           <div style="display:flex;align-items:center;gap:10px"><x-import component-from-global-scope="SignallqDesignSystem.Icon" name="phone_iphone" size="20" color="var(--text-primary)" hint-size="20px,20px"></x-import><span style="font:600 17px/1 var(--font-sans);letter-spacing:-.01em">iOS</span></div>
-          <x-import component-from-global-scope="SignallqDesignSystem.Badge" color="#9CA3AF" hint-size="auto,22px">Planejado</x-import>
+          <x-import component-from-global-scope="SignallqDesignSystem.Badge" color="#9CA3AF" hint-size="auto,22px">Em avaliação</x-import>
         </div>
         <div style="position:relative;padding-left:26px;border-left:1px solid var(--border);display:flex;flex-direction:column;gap:22px">
           <div style="position:relative"><div style="position:absolute;left:-32px;top:0;width:11px;height:11px;border-radius:50%;background:var(--bg-card);border:2px solid var(--accent);box-shadow:0 0 0 4px rgba(108,43,255,.16)"></div><div style="font:600 15px/1.2 var(--font-sans);color:var(--text-primary)">Planejamento</div><div style="margin-top:5px;font:500 12px/1 var(--font-sans);color:var(--accent)">Em definição</div></div>
@@ -243,24 +309,6 @@ a{color:inherit;text-decoration:none}
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- upcoming products -->
-  <section data-screen-label="Proximos" style="border-top:1px solid var(--border);background:var(--bg-primary)">
-    <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(20px,5vw,32px)">
-      <div data-reveal="" style="margin-bottom:28px">
-        <x-import component-from-global-scope="SignallqDesignSystem.Overline" hint-size="auto,16px">Próximos produtos</x-import>
-      </div>
-      <div data-reveal="" style="max-width:520px">
-        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:26px;transition:border-color .35s ease" style-hover="border-color:var(--accent)">
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
-            <div style="font:600 22px/1 var(--font-sans);letter-spacing:-.02em">Quanto</div>
-            <x-import component-from-global-scope="SignallqDesignSystem.Badge" color="#9CA3AF" hint-size="auto,22px">Planejamento</x-import>
-          </div>
-          <p style="margin-top:14px;font:400 15px/1.6 var(--font-sans);color:var(--text-secondary)">Gestão patrimonial pessoal em um só lugar. O Quanto consolida contas, investimentos e ativos de diferentes instituições em uma visão única — com acompanhamento claro da evolução do patrimônio ao longo do tempo.</p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -349,7 +397,6 @@ a{color:inherit;text-decoration:none}
         <div style="margin-bottom:16px"><x-import component-from-global-scope="SignallqDesignSystem.Overline" hint-size="auto,16px">Produtos</x-import></div>
         <div style="display:flex;flex-direction:column;gap:10px;font:400 14px/1 var(--font-sans)">
           <a href="#signallq" style="color:var(--text-primary);transition:color .25s ease" style-hover="color:var(--accent)">SignallQ</a>
-          <span style="color:var(--text-secondary)">Quanto (Planejado)</span>
         </div>
       </div>
       <div>
@@ -357,7 +404,7 @@ a{color:inherit;text-decoration:none}
         <div style="display:flex;flex-direction:column;gap:10px;font:400 14px/1 var(--font-sans)">
           <span style="color:var(--text-primary)">Android</span>
           <span style="color:var(--text-primary)">Web App</span>
-          <span style="color:var(--text-secondary)">iOS (Planejado)</span>
+          <span style="color:var(--text-secondary)">iOS (Em avaliação)</span>
         </div>
       </div>
       <div style="display:flex;align-items:flex-end;justify-content:flex-start">
